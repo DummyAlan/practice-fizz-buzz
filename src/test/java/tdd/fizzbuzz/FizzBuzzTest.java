@@ -48,7 +48,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void given21_whenCountOff_thenShouldReturnBuzzWhizz() {
+    void given21_whenCountOff_thenShouldReturnFizzWhizz() {
         String actual = mFizzBuzz.countOff(21);
 
         assertEquals("FizzWhizz", actual);
