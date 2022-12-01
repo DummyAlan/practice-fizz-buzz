@@ -21,14 +21,17 @@ public class FizzBuzz {
     }
 
 
-    public String countOff(int number){
+    public String countOff(int number) {
 
-        String result = Arrays.stream(DENOMINATORS.values()).map(denom -> handleNumber(number, denom)).collect(Collectors.joining());
+        String result = Arrays
+                .stream(DENOMINATORS.values())
+                .map(denom -> handleNumber(number, denom))
+                .collect(Collectors.joining());
 
-        return result.isEmpty()?String.valueOf(number):result;
+        return result.isEmpty() ? String.valueOf(number) : result;
     }
 
     private String handleNumber(int number, DENOMINATORS denom) {
-        return number%denom.denominator == 0?denom.countOffString:"";
+        return number % denom.denominator == 0 ? denom.countOffString : "";
     }
 }
