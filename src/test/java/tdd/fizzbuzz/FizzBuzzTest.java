@@ -9,16 +9,31 @@ public class FizzBuzzTest {
     FizzBuzz mFizzBuzz = new FizzBuzz();
 
     @Test
-    public void given1_whenCountOff_thenShouldReturn1() {
+    void given1_whenCountOff_thenShouldReturn1() {
         String actual = mFizzBuzz.countOff(1);
 
-        assertEquals(actual, "1");
+        assertEquals("1", actual);
     }
     @Test
-    public void given3_whenCountOff_thenShouldReturnFizz() {
+    void given3_whenCountOff_thenShouldReturnFizz() {
         String actual = mFizzBuzz.countOff(3);
 
-        assertEquals(actual, "Fizz");
+        assertEquals("Fizz", actual);
     }
+
+    @Test
+    void given5_whenCountOff_thenShouldReturnBuzz() {
+        String actual = mFizzBuzz.countOff(5);
+
+        assertEquals("Buzz", actual);
+    }
+    @Test
+    void given15_whenCountOff_thenShouldReturnFizzBuzz() {
+        String actual = mFizzBuzz.countOff(15);
+
+        assertEquals("FizzBuzz", actual);
+    }
+
+
 
 }

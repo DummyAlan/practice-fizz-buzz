@@ -6,10 +6,13 @@ public class FizzBuzz {
 
         String resultStr = "";
 
-        if (number%3 == 0){
+        if(number%15 == 0){
+            resultStr = "FizzBuzz";
+        } else if (number%3 == 0){
             resultStr = "Fizz";
-        }
-        else {
+        } else if (number%5 == 0) {
+            resultStr = "Buzz";
+        } else {
             resultStr = String.valueOf(number);
         }
         return resultStr;
